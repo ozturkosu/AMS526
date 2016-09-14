@@ -61,7 +61,20 @@ end
 function Yvec = MatVecMultiply(Amat, Xvec)
 % Subfunction implementing right matrix-vector multiplication.
 assert(size(Amat,2)==size(Xvec,1), 'Matrix and vector sizes are incompatible');
+loopSize=size(Xvec,1);
+rowNumber=size(Amat,2);
+finalSize=size(Xvec,2);
+Final=zeros(rowNumber,finalSize);
 
+for i=1:loopSize
+    newElement=0;
+    for j=1:rowNumber
+       newElement=newElement+Amat(i,j)*Xvec(j);
+    end
+  Final(i)=newElement;
+    
+end
+Yvec=Final;
 % TODO: Implement this function
 
 end
@@ -69,6 +82,23 @@ end
 function Bmat = MatMatMultiply(A1mat, A2mat)
 % Subfunction implementing matrix-matrix multiplication.
 assert(size(A1mat,2)==size(A2mat,1), 'Matrices are incompatible for matrix-matrix multiplication.');
+rowA1=size(A1mat,1);
+colA1=size(A1mat,2);
+
+ 
+colA2=size(A2mat,2);
+
+FinalMatrix=zeros(rowA1,colA2);
+for i1=1:rowA1
+     
+    for j1=1:colA2
+        for k=1:colA1
+        FinalMatrix(i1,j1)=FinalMatrix(i1,j1)+(A1mat(i1,k)*A2mat(k,j1));
+        end
+        
+    end
+end
+Bmat=FinalMatrix;
 
 % TODO: Implement this function
 end
