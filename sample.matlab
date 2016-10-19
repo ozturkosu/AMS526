@@ -14,12 +14,17 @@ for n = 3:15
 end
 
 function result_m = my_gschmidt(A,n)
-% function pass in value of A and n ,
+% function pass in value of A and n 
+%TODO finish the funciton with the algo above
 	for j = 1:n
 		v_row = A(j,:) % assigan jth row of A to the vector v_row 
 		for i = 1:(j-1)
-			
+
 		end	
 	end
 	
+end
+
+function result_m2 = my_householder(A,n)
+%TODO finish the funciton 
 end
