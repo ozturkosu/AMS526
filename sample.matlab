@@ -27,4 +27,12 @@ end
 
 function result_m2 = my_householder(A,n)
 %TODO finish the funciton 
+	
+	for k = 1:n
+		x=Ak:m,k
+		vk=sign(x1)norm(x,2)e1+x
+		vk = vk/norm(vk,2)
+		Ak:m,k:n=Ak:m,k:n-2*vk(vk*Ak:m,k:n)
+	end
+
 end
