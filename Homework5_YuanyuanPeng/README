@@ -1,0 +1,20 @@
+Name: Yuanyuan Peng
+ID: 108 734 720
+
+This folder includes:
+
+Homework5_Yuanyuan_Peng.c ---file
+hw6yp --- output file
+results.csv --- csv file
+plot.jpg --- the plot from the csv file
+report.pdf --- the report of this homework
+
+To run the C file do 
+
+gcc Homework5_Yuanyuan_Peng.c -o hw6yu -llapack -lblas -lm
+
+then run:
+./hw6yu
+
+This will print out all the iterations, and make a results.csv file in the directory.
+All the error data of both SVD and EIG are in the results.csv file.
